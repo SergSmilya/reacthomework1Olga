@@ -1,16 +1,25 @@
+import Person from './Person/Person';
+import data from '../data/data';
+import StatisticList from './Statistic/StatisticList';
+import FriendList from './Friends/FriendList';
+import TransactionHistory from './Transaction/TransactionHistory';
+
 export const App = () => {
   return (
     <div
       style={{
-        height: '100vh',
-        display: 'flex',
+        height: '50%',
+        display: 'block',
         justifyContent: 'center',
         alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
+        fontSize: 20,
+        color: '#010101',
       }}
     >
-      React homework template
+      <Person data={data} />
+      <StatisticList title="Upload stats" />
+      <FriendList />
+      <TransactionHistory />
     </div>
   );
 };
